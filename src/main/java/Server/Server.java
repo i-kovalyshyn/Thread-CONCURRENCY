@@ -11,7 +11,7 @@ public class Server extends Thread {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println( HttpServ());
+            System.out.println(HttpServ());
         }
     }
 

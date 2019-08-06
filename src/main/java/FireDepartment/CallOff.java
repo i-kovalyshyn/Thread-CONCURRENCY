@@ -6,8 +6,9 @@ public class CallOff implements Runnable {
     CallOff(Alarm alarm) {
         this.alarm = alarm;
     }
-    public void run(){
-        for (int i=1; i<5; i++){
+
+    public void run() {
+        for (int i = 1; i < 5; i++) {
             try {
                 alarm.alarmOff();
             } catch (InterruptedException e) {
