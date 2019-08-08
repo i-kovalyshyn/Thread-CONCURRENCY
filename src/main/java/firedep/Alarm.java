@@ -1,4 +1,4 @@
-package main.java.FireDepartment;
+package main.java.firedep;
 
 class Alarm {
     private boolean ring;
