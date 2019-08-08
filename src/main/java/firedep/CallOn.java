@@ -1,4 +1,4 @@
-package main.java.FireDepartment;
+package main.java.firedep;
 
 public class CallOn implements Runnable {
     private Alarm alarm;
@@ -7,8 +7,8 @@ public class CallOn implements Runnable {
         this.alarm = alarm;
     }
 
-    public void run(){
-        for (int i=1; i<5; i++){
+    public void run() {
+        for (int i = 1; i < 5; i++) {
             try {
                 alarm.alarmOn();
             } catch (InterruptedException e) {

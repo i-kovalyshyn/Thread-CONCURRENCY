@@ -1,25 +1,25 @@
-package main.java.FireDepartment;
+package main.java.firedep;
 
 class Alarm {
-    private int ring = 0;
+    private boolean ring;
 
     synchronized void alarmOff() throws InterruptedException {
-        while (ring <1) {
+        while (!ring) {
             wait();
         }
-        ring--;
-        System.out.println( "Everything good - on -"+Thread.currentThread());
+        ring = false;
+        System.out.println("Everything good - on -" + Thread.currentThread());
         System.out.println("Fireman wait for alarm");
         notify();
     }
 
     synchronized void alarmOn() throws InterruptedException {
-        while (ring>=1){
+        while (ring) {
             wait();
         }
-        ring++;
+        ring = true;
 
-        System.out.println("ALARM, FIRE - on -"+Thread.currentThread());
+        System.out.println("ALARM, FIRE - on -" + Thread.currentThread());
         System.out.println("The fire was extinguished");
         notify();
     }
